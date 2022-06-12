@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-gradient-to-r from-orange-300 to-orange-400 text-white p-2};
+.wrap { @apply bg-main-dark rounded-2xl }
+.absolute-link { @apply w-full h-full absolute top-0 left-0 z-10 };
+.btn-primary { @apply inline-flex items-center bg-primary text-black text-center rounded-xl cursor-pointer }
+
+.header { @apply w-full py-6 z-10 }
+.welcome-image { @apply relative rounded-xl }
+.welcome-title { @apply text-5xl leading-16 font-bold }
+.welcome-description { @apply text-xl }
+.welcome-btn { @apply inline-flex p-4 }
