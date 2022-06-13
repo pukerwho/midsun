@@ -50,7 +50,6 @@
         </div>
         <div class="w-full w-2/6 xl:px-5">
           <div class="relative flex items-center mb-6">
-            <div class="w-4 h-4 bg-gradient-to-r to-orange-300 from-orange-400 rounded-full mr-2"></div>  
             <span class="relative text-lg font-black"><?php _e('Контакти', 'treba-wp'); ?></span>
           </div>
           <div class="relative">
