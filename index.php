@@ -106,14 +106,14 @@
     <div class="flex xl:-mx-8">
       <div class="w-full xl:w-1/2 xl:px-8">
         <div class="relative">
-          <div class="w-full h-full absolute -left-4 -top-4 bg-gradient-to-tr from-orange-200 to-orange-300 rounded-xl"></div>
+          <div class="w-full h-full absolute -left-4 -top-4 bg-gradient-to-r from-orange-200 to-orange-300 rounded-xl"></div>
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/welcome-bg.jpeg" alt="" class="w-full h-[450px] relative object-cover rounded-xl photo-bg-style-one-animate">
         </div>
       </div>
       <div class="w-full xl:w-1/2 xl:px-8">
-        <div class="text-4xl leading-12 text-transparent bg-clip-text bg-gradient-to-tr from-indigo-300 to-orange-400 mb-6"><?php _e("Лише 1 з 4 брендів виділяється споживачами", "treba-wp"); ?>.</div>
+        <div class="text-4xl leading-12 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-orange-400 mb-6"><?php _e("Лише 1 з 4 брендів виділяється споживачами", "treba-wp"); ?>.</div>
         <div class="block-top-animate text-lg opacity-90 mb-6">
-          Кожна взаємодія має значення. У цифрову епоху особисті контакти на вашій території важать значно більше, ніж звичайні транзакції. Важливий емоційний досвід. Проте споживачі повідомляють, що лише один з 4 брендів відрізняється від конкурентів. <span class="text-primary">Будьте серед 25-ти кращих зі 100, що виділяються для споживачів.</span> Арома маркетинг дає змогу компаніям виокремити себе завдяки потужним враженням в місцях контакту з клієнтами
+          Кожна взаємодія має значення. У цифрову епоху особисті контакти на вашій території важать значно більше, ніж звичайні транзакції. Важливий емоційний досвід. Проте споживачі повідомляють, що лише один з 4 брендів відрізняється від конкурентів. <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-yellow-200 to-orange-300">Будьте серед 25-ти кращих зі 100, що виділяються для споживачів.</span> Арома маркетинг дає змогу компаніям виокремити себе завдяки потужним враженням в місцях контакту з клієнтами
         </div>
         <div class="block-top-big-animate">
           <ul class="custom-list opacity-90">

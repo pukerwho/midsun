@@ -47,6 +47,17 @@ document.addEventListener('DOMContentLoaded', function(){
   blockTopBigAnimate.from('.block-top-big-animate', { translateY: '100px', opacity: 0 });
   blockTopBigAnimate.to('.block-top-big-animate', { translateY: '0px', opacity: 1 });
 
+  let footerWaveAnimate = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.footer-wave-animate',
+      scrub: true,
+      start: 'bottom bottom',
+      end: 'top 0px',
+    },
+  });
+  footerWaveAnimate.from('.footer-wave-animate', { translateY: '50%' });
+  footerWaveAnimate.to('.footer-wave-animate', { translateY: '0' });
+
   gsap.timeline().to('.welcome-image', { className: 'welcome-image welcome-image-scroll show-treba' }, '+=0.25');
   gsap.timeline().to('.welcome-title', { className: 'welcome-title welcome-image-scroll show-treba' }, '+=0.5');
   gsap.timeline().to('.welcome-description', { className: 'welcome-description show-treba' }, '+=0.75');
