@@ -553,8 +553,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
-.-top-4 {
-  top: -1rem;
+.-top-16 {
+  top: -4rem;
 }
 
 .left-4 {
@@ -563,6 +563,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .-left-4 {
   left: -1rem;
+}
+
+.-top-8 {
+  top: -2rem;
 }
 
 .right-0 {
@@ -723,6 +727,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem;
 }
 
+.h-\[50px\] {
+  height: 50px;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -858,49 +866,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
-.border-x-8 {
-  border-left-width: 8px;
-  border-right-width: 8px;
-}
-
-.border-x-4 {
-  border-left-width: 4px;
-  border-right-width: 4px;
-}
-
-.border-b-8 {
-  border-bottom-width: 8px;
-}
-
-.border-t-0 {
-  border-top-width: 0px;
-}
-
 .border-b {
   border-bottom-width: 1px;
-}
-
-.border-b-4 {
-  border-bottom-width: 4px;
-}
-
-.border-solid {
-  border-style: solid;
 }
 
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-
-.border-x-transparent {
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.border-b-orange-300 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(253 186 116 / var(--tw-border-opacity));
 }
 
 .bg-main-gray {
@@ -943,21 +915,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(99 102 241 / 0));
 }
 
-.from-orange-200 {
-  --tw-gradient-from: #fed7aa;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(254 215 170 / 0));
-}
-
-.from-indigo-300 {
-  --tw-gradient-from: #a5b4fc;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(165 180 252 / 0));
-}
-
-.from-orange-300 {
-  --tw-gradient-from: #fdba74;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(253 186 116 / 0));
-}
-
 .from-transparent {
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
@@ -965,10 +922,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .via-purple-500 {
   --tw-gradient-stops: var(--tw-gradient-from), #a855f7, var(--tw-gradient-to, rgb(168 85 247 / 0));
-}
-
-.via-yellow-200 {
-  --tw-gradient-stops: var(--tw-gradient-from), #fef08a, var(--tw-gradient-to, rgb(254 240 138 / 0));
 }
 
 .to-orange-300 {
@@ -979,17 +932,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #ec4899;
 }
 
-.to-orange-400 {
-  --tw-gradient-to: #fb923c;
-}
-
 .to-black\/75 {
   --tw-gradient-to: rgb(0 0 0 / 0.75);
-}
-
-.bg-clip-text {
-  -webkit-background-clip: text;
-          background-clip: text;
 }
 
 .object-cover {
@@ -1115,11 +1059,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(255 214 137 / var(--tw-text-opacity));
-}
-
-.text-transparent {
-  color: transparent;
+  color: rgb(214 153 40 / var(--tw-text-opacity));
 }
 
 .text-gray-800 {
@@ -1164,11 +1104,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--tw-gradient-stops)));
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #fdba74;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(253 186 116 / 0));
-  --tw-gradient-to: #fb923c;
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 153 40 / var(--tw-bg-opacity));
   padding: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1201,7 +1138,7 @@ body {
           align-items: center;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 214 137 / var(--tw-bg-opacity));
+  background-color: rgb(214 153 40 / var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1222,7 +1159,6 @@ body {
 .welcome-title {
   font-size: 3rem;
   line-height: 1;
-  font-weight: 700;
   line-height: 4rem;
 }
 

@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function(){
   footerWaveAnimate.to('.footer-wave-animate', { translateY: '0' });
 
   gsap.timeline().to('.welcome-image', { className: 'welcome-image welcome-image-scroll show-treba' }, '+=0.25');
-  gsap.timeline().to('.welcome-title', { className: 'welcome-title welcome-image-scroll show-treba' }, '+=0.5');
+  gsap.timeline().to('.welcome-title', { className: 'welcome-title welcome-image-scroll show-treba font-title' }, '+=0.5');
   gsap.timeline().to('.welcome-description', { className: 'welcome-description show-treba' }, '+=0.75');
   gsap.timeline().to('.welcome-btn', { className: 'welcome-btn show-treba btn-primary' }, '+=1');
   gsap.timeline().to('.header', { className: 'header show-treba' }, '+=1.25');

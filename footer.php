@@ -10,10 +10,8 @@
     <div class="container py-16">
       <div class="flex flex-wrap flex-col xl:flex-row xl:-mx-5">
         <div class="w-full w-2/6 xl:px-5">
-          <div class="flex items-end mb-6">
-            <div class="w-4 h-4 rounded-full bg-gradient-to-r to-orange-300 from-orange-400"></div>
-            <div class="w-4 h-12 rounded-xl bg-gradient-to-b to-orange-300 from-orange-400 -rotate-[22deg] mr-3"></div>
-            <div class="w-4 h-12 rounded-xl bg-orange-300"></div>
+          <div class="flex mb-6">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/midsun-logo.svg" alt="Logo" class="h-[50px]">
           </div>
           <div class="text-xl mb-6">
             Зміцнюйте ідентичність бренду ароматом. Покращуйте емоційний досвід клієнтів.
@@ -24,8 +22,8 @@
         </div>
         <div class="w-full w-1/6 xl:px-5">
           <div class="relative flex items-center mb-6">
-            <div class="w-4 h-4 bg-gradient-to-r to-orange-300 from-orange-400 mr-2"></div>  
-            <span class="relative text-lg font-black"><?php _e('Компанія', 'treba-wp'); ?></span>
+            <div><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4 mr-2"></div>
+            <span class="relative text-lg font-black uppercase"><?php _e('Компанія', 'treba-wp'); ?></span>
           </div>
           <div>
             <?php wp_nav_menu([
@@ -37,8 +35,8 @@
         </div>
         <div class="w-full w-1/6 xl:px-5">
           <div class="relative flex items-center mb-6">
-            <div class="w-4 h-4 bg-gradient-to-r to-orange-300 from-orange-400 rounded-full mr-2"></div>  
-            <span class="relative text-lg font-black"><?php _e('Інформація', 'treba-wp'); ?></span>
+            <div><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4 mr-2"></div>
+            <span class="relative text-lg font-black uppercase"><?php _e('Інформація', 'treba-wp'); ?></span>
           </div>
           <div>
             <?php wp_nav_menu([
@@ -50,10 +48,10 @@
         </div>
         <div class="w-full w-2/6 xl:px-5">
           <div class="relative flex items-center mb-6">
-            <span class="relative text-lg font-black"><?php _e('Контакти', 'treba-wp'); ?></span>
+            <span class="relative text-lg font-black uppercase"><?php _e('Контакти', 'treba-wp'); ?></span>
           </div>
           <div class="relative">
-            <div class="w-full h-full absolute top-0 left-0 rounded-3xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-2xl"></div>
+            <div class="w-full h-full absolute top-0 left-0" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-small.svg); background-size: cover;"></div>
             <div class="p-1">
               <div class="relative bg-main-dark rounded-3xl p-6">
                 <!-- Phone -->

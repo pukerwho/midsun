@@ -29,7 +29,7 @@ module.exports = {
       colors: {
         'main-dark': '#0B0B0F',
         'main-gray': '#17171a',
-        'primary': '#ffd689',
+        'primary': '#d69928',
       },
       fontSize: {
         // '20xl': '20rem'

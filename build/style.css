@@ -17,7 +17,7 @@
   position: absolute;
   left: 0;
   bottom: -20px;
-  background: #ffd689;
+  background: #d69928;
   opacity: 0;
   visibility: hidden;
   transition: all 0.35s;
@@ -173,9 +173,7 @@
 body {
   scroll-behavior: smooth;
   font-size: 16px;
-  font-family: Rubik, sans-serif;
-  font-variant: tabular-nums;
-  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
   line-height: 1.25;
 }
 
@@ -187,7 +185,7 @@ a {
 }
 
 a:hover {
-  color: #ffd689;
+  color: #d69928;
 }
 
 [class*=" icon-"], [class^=icon-] {
@@ -201,6 +199,11 @@ a:hover {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+
+.font-title {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
 }
 
 .menu-trigger {
@@ -236,5 +239,5 @@ a:hover {
   position: absolute;
   top: 0.35rem;
   left: 0;
-  background-color: #ffd689;
+  background-color: #d69928;
 }

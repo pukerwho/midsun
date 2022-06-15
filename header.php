@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1D1E22" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 	<?php echo carbon_get_theme_option('crb_google_analytics'); ?>
 </head>
@@ -16,10 +19,8 @@
       <div class="container">
         <div class="w-full">
           <div class="flex justify-between items-center">
-            <div class="flex items-end">
-              <div class="w-4 h-4 rounded-full bg-gradient-to-r to-orange-300 from-orange-400"></div>
-              <div class="w-4 h-12 rounded-xl bg-gradient-to-b to-orange-300 from-orange-400 -rotate-[22deg] mr-3"></div>
-              <div class="w-4 h-12 rounded-xl bg-orange-300"></div>
+            <div class="flex ">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/midsun-logo.svg" alt="Logo" class="w-full h-[50px]">
             </div>
             <div class="hidden xl:block mainmenu">
               <?php wp_nav_menu([
