@@ -1217,6 +1217,7 @@ body {
 }
 
 .header {
+  position: relative;
   z-index: 10;
   width: 100%;
   padding-top: 1.5rem;
@@ -1233,10 +1234,10 @@ body {
   --tw-gradient-from: #17171a;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(23 23 26 / 0));
   --tw-gradient-to: #0B0B0F;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .header .sub-menu:hover {

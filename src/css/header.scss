@@ -43,13 +43,14 @@
   }
   .sub-menu {
     display: none;
+    min-width: 220px;
     position: absolute;
     margin-top: 10px !important;
     .menu-item {
       text-align: left !important;
       padding: 0 0 15px 0 !important;
       margin-bottom: 15px;
-      border-bottom: 1px solid rgba(214,153,40,0.4);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       &:last-of-type {
         margin-bottom: 0;
         padding-bottom: 0 !important;
