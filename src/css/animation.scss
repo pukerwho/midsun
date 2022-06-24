@@ -1,3 +1,15 @@
+.treba-animate {
+  &.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s, transform 2s;
+    &.treba-show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 .header {
   opacity: 0;
   transform: translateY(-100%);
@@ -15,6 +27,17 @@
   &.show-treba {
     opacity: 1;
     left: 0;
+  }
+  &-bg {
+    top: -4rem;
+    left: 1rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 1s 0.45s;
+    &.show-treba {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
 }
 
@@ -44,5 +67,33 @@
   &.show-treba {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.whyus-item-one, .whyus-item-two, .whyus-item-three, .whyus-item-four {
+  &.treba-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.75s;
+    &.treba-show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.whyus-item-one.treba-show {transition-delay: 0.25s}
+.whyus-item-two.treba-show {transition-delay: 0.5s}
+.whyus-item-three.treba-show {transition-delay: 0.75s}
+.whyus-item-four.treba-show {transition-delay: 1s}
+
+.aromabussiness-item__parent {
+  &.treba-animate {
+    opacity: 0;
+    transform: translateX(15px);
+    transition: opacity 1s, transform 2s;
+    &.treba-show {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }

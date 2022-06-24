@@ -29,7 +29,7 @@
                 'menu_class' => 'flex'
               ]); ?> 
             </div>
-            <div><a href="#" class="bg-main-gray rounded-2xl px-8 py-3"><?php _e("Зв'язатися з нами", "treba-wp"); ?></a></div>
+            <div><a href="#" class="bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4"><?php _e("Зв'язатися з нами", "treba-wp"); ?></a></div>
             <div class="xl:hidden">Menu-trigger</div>
           </div>
         </div>

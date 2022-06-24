@@ -5,6 +5,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function(){
 
+  //Animate Treba 
+  function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add('treba-show');
+      }
+    });
+  }
+
+  let options = {
+    threshold: [0.5]
+  };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.treba-animate');
+
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
+
+
   let animateWelcomeImages = gsap.timeline({
     scrollTrigger: {
       trigger: '.welcome',
@@ -58,7 +78,19 @@ document.addEventListener('DOMContentLoaded', function(){
   footerWaveAnimate.from('.footer-wave-animate', { translateY: '50%' });
   footerWaveAnimate.to('.footer-wave-animate', { translateY: '0' });
 
+  let aromabrandingSubtitle = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.aromabranding-subtitle',
+      scrub: true,
+      start: 'bottom bottom',
+      end: 'top 0px',
+    },
+  });
+  aromabrandingSubtitle.from('.aromabranding-subtitle', { translateY: '0%' });
+  aromabrandingSubtitle.to('.aromabranding-subtitle', { translateY: '-100%' });
+
   gsap.timeline().to('.welcome-image', { className: 'welcome-image welcome-image-scroll show-treba' }, '+=0.25');
+  gsap.timeline().to('.welcome-image-bg', { className: 'welcome-image-bg show-treba' }, '+=0.25');
   gsap.timeline().to('.welcome-title', { className: 'welcome-title welcome-image-scroll show-treba font-title' }, '+=0.5');
   gsap.timeline().to('.welcome-description', { className: 'welcome-description show-treba' }, '+=0.75');
   gsap.timeline().to('.welcome-btn', { className: 'welcome-btn show-treba btn-primary' }, '+=1');

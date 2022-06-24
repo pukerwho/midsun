@@ -8,7 +8,9 @@ body { @apply bg-primary text-white p-2};
 .btn-primary { @apply inline-flex items-center bg-primary text-black text-center rounded-xl cursor-pointer }
 
 .header { @apply w-full py-6 z-10 }
+.header .sub-menu { @apply bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-8 py-6}
 .welcome-image { @apply relative rounded-xl }
+.welcome-image-bg { @apply w-full h-full absolute }
 .welcome-title { @apply text-5xl leading-16 }
 .welcome-description { @apply text-xl }
 .welcome-btn { @apply inline-flex p-4 }
