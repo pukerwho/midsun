@@ -30,6 +30,7 @@ add_action( 'after_setup_theme', 'treba_wp_setup' );
 
 include('inc/enqueues.php');
 include('inc/share-social.php');
+include('inc/create-custom-posts.php');
 
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;

@@ -36,70 +36,9 @@
 </div>
 <!-- END WELCOME BLOCK -->
 
-<div class="clients w-[200%] flex items-center bg-main-gray py-8 mb-28">
-  <div class="clients-animate flex items-center">
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eleven_mirror.svg" alt="" class="h-10">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planeta_kino.svg" alt="" class="h-16">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/intertop.png" alt="" class="h-10">
-    </div>
-
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eleven_mirror.svg" alt="" class="h-10">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planeta_kino.svg" alt="" class="h-16">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/intertop.png" alt="" class="h-10">
-    </div>
-
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eleven_mirror.svg" alt="" class="h-10">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planeta_kino.svg" alt="" class="h-16">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/intertop.png" alt="" class="h-10">
-    </div>
-  </div>
-  <div class="clients-animate flex items-center">
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eleven_mirror.svg" alt="" class="h-10">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planeta_kino.svg" alt="" class="h-16">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/intertop.png" alt="" class="h-10">
-    </div>
-
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eleven_mirror.svg" alt="" class="h-10">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planeta_kino.svg" alt="" class="h-16">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/intertop.png" alt="" class="h-10">
-    </div>
-
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eleven_mirror.svg" alt="" class="h-10">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planeta_kino.svg" alt="" class="h-16">
-    </div>
-    <div class="client-item px-10">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/intertop.png" alt="" class="h-10">
-    </div>
-  </div>
-</div>
+<!-- Clients -->
+  <?php echo get_template_part('template-parts/components/clients'); ?>
+<!-- Clients END -->
 
 <div class="mb-32">
   <div class="container">
@@ -127,48 +66,11 @@
   </div>
 </div>
 
+<!-- Why us -->
 <div class="mb-32">
-  <div class="container">
-    <div class="w-full xl:w-2/3 flex flex-col items-center relative font-title mx-auto mb-16">
-      <div class="aromabranding-subtitle stroke-text absolute text-8xl uppercase opacity-10">Aromabranding</div>
-      <h2 class="text-4xl leading-12 text-center"><?php _e("Midsun і Scentair", "treba-wp"); ?> <span class="text-primary"><?php _e("найкращі партнери", "treba-wp"); ?></span> <?php _e("для ароматизації бізнесу", "treba-wp"); ?></h2>
-    </div>
-    <div class="flex flex-wrap xl:-mx-4">
-      <div class="w-full xl:w-1/4 xl:px-4">
-        <div class="flex flex-col items-center whyus-item-one treba-animate">
-          <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ranking.svg" width="62"></div>
-          <div class="text-lg opacity-75">
-            <?php _e("Scentair - лідер ринку у світі - з 1994 року", "treba-wp"); ?>. <?php _e("Мідсан - лідер ринку України з 2014 року. За нами колосальна експертиза", "treba-wp"); ?>
-          </div>
-        </div>
-      </div>
-      <div class="w-full xl:w-1/4 xl:px-4">
-        <div class="flex flex-col items-center whyus-item-two treba-animate">
-          <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma.svg" width="62"></div>
-          <div class="text-lg opacity-75">
-            <?php _e("Супутні арома продукти значно посилюють клієнтський досвід та генерують прибуток", "treba-wp"); ?>
-          </div>
-        </div>
-      </div>
-      <div class="w-full xl:w-1/4 xl:px-4">
-        <div class="flex flex-col items-center whyus-item-three treba-animate">
-          <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/flowers.svg" width="62"></div>
-          <div class="text-lg opacity-75">
-            <?php _e("Лідерство в методології підбору ароматів і в самих ароматах - унікальна бібліотека з понад 2700 якісних та безпечних ароматів", "treba-wp"); ?>
-          </div>
-        </div>
-      </div>
-      <div class="w-full xl:w-1/4 xl:px-4">
-        <div class="flex flex-col items-center whyus-item-four treba-animate">
-          <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hosting.svg" width="62"></div>
-          <div class="text-lg opacity-75">
-            <?php _e("Лідерство в технологіях і ми єдина компанія, що працює на обладнанні виробництва США", "treba-wp"); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php echo get_template_part('template-parts/components/whyus'); ?>
 </div>
+<!-- Why us END -->
 
 <div class="relative mb-20">
   <div class="flex items-center justify-center opacity-75 -mx-2 mb-6 treba-animate fade-up">
@@ -178,6 +80,7 @@
   </div>
 </div>
 
+<!-- Banners -->
 <div class="mb-52">
   <div class="container">
     <div class="flex flex-col xl:flex-row xl:items-center xl:-mx-10">
@@ -228,8 +131,10 @@
     </div>
   </div>
 </div>
+<!-- Banners END -->
 
-<div class="mb-52">
+<!-- Aromabussiness-items -->
+<div class="mb-32">
   <div class="container">
     <div class="relative flex flex-col items-center">
       <div class="aromabranding-subtitle stroke-text font-title absolute text-8xl uppercase opacity-10"><?php _e("Ароматизація", "treba-wp"); ?></div>
@@ -240,212 +145,129 @@
         <div class="bg-primary w-6 h-[1px] px-2"></div>
       </div>
     </div>
-    
-    <div class="flex flex-wrap">
-      <div class="aromabussiness-item w-full" data-number="1">
-        <!-- Item Parent -->
-        <div class="aromabussiness-item__parent w-full treba-animate mb-6">
-          <div class="flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer py-6 px-8">
-            <div class="flex items-center">
-              <div class="mr-4">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-icon.svg" width="50">
-              </div>
-              <div>
-                <div class="text-2xl mb-2"><?php _e("Індустріі аромамаркетінга", "treba-wp"); ?></div>
-                <div class="opacity-75"><?php _e("Рітейл, Готелі, Ресторани, Офіси", "treba-wp"); ?>...</div>
-              </div>
-            </div>
-            <div class="flex items-center bg-main-dark rounded-2xl px-8 py-3">
-              <div class="mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
-                </svg>
-              </div>
-            </div>
-          </div>
+    <?php echo get_template_part('template-parts/aromaitems/aromabussiness-items'); ?>
+  </div>
+</div>
+<!-- Aromabussiness-items END -->
+
+<div class="mb-32 hidden">
+  <div class="container">
+    <div class="relative flex flex-col items-center mb-12">
+      <h2 class="text-4xl leading-12 text-center font-title mb-6 treba-animate fade-up"><?php _e("Кейси наших кліентів", "treba-wp"); ?></h2>
+      <div class="flex items-center justify-center opacity-75 -mx-2 mb-6 treba-animate fade-up">
+        <div class="bg-primary w-6 h-[1px] px-2"></div>
+        <div class="px-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4"></div>
+        <div class="bg-primary w-6 h-[1px] px-2"></div>
+      </div>
+    </div>
+    <!-- Case item -->
+    <div class="case-item flex flex-col xl:flex-row flex-wrap mb-10 xl:-mx-10">
+      <div class="w-full xl:w-1/2 relative xl:px-10">
+        <div class="absolute top-1/2 -translate-y-1/2 case-item-animation">
+          <div class="text-primary text-2xl font-title mb-6">Helen Marlen Mandarin</div>
+          <div class="w-full xl:w-3/4 text-lg opacity-75 mb-8">"... найбільший мультибренд мережі Helen Marlen Group, створений в кращих традиціях європейських open space ..."</div>
+          <div><a href="#" class="inline-block bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4"><?php _e("Читати історію повністю", "treba-wp"); ?></a></div>
         </div>
-        <!-- END Item Parent -->
-        <!-- Subitem Рітеіл -->
-        <div class="aromabussiness-item__child w-full h-[75px] flex justify-end treba-animate pl-12 mb-6">
-          <div class="w-full flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer">
-            <div class="flex items-center">
-              <div class="mr-6">
-                <div class="relative h-[75px]">
-                  <img src="https://airq.com.ua/wp-content/uploads/2022/05/pexels-artem-beliaikin-994517.jpg" width="175" class="rounded-l-2xl h-full object-cover">
-                  <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
-                </div>
-              </div>
-              <div class="mr-6">
-                <div class="w-[1px] h-[35px] bg-primary"></div>
-              </div>
-              <div>
-                <div class="text-2xl"><?php _e("Рітейл", "treba-wp"); ?></div>
-              </div>
-            </div>
-            <div class="px-8">
-              <div class="flex items-center bg-main-dark rounded-2xl px-8 py-3">
-                <div class="mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-75" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="w-full xl:w-1/2 xl:px-10">
+        <div class="sticky top-4">
+          <img src="https://static.tildacdn.com/tild3263-6339-4163-b836-353363663834/8aca5ec60a9d9231382e.JPG" alt="" loading="lazy" class="w-full h-76 object-cover rounded-2xl">
         </div>
-        <!-- END Subitem -->
-        <!-- Subitem Готелі -->
-        <div class="aromabussiness-item__child w-full flex justify-end treba-animate pl-12 mb-6">
-          <div class="w-full flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer">
-            <div class="flex items-center">
-              <div class="mr-6">
-                <div class="relative h-[75px]">
-                  <img src="https://airq.com.ua/wp-content/uploads/2022/05/ciudad-maderas-MXbM1NrRqtI-unsplash.jpg" width="175" class="rounded-l-2xl h-full object-cover">
-                  <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
-                </div>
-              </div>
-              <div class="mr-6">
-                <div class="w-[1px] h-[35px] bg-primary"></div>
-              </div>
-              <div>
-                <div class="text-2xl"><?php _e("Готелі", "treba-wp"); ?></div>
-              </div>
-            </div>
-            <div class="px-8">
-              <div class="flex items-center bg-main-dark rounded-2xl px-8 py-3">
-                <div class="mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-75" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+    </div>
+    <!-- END Case item -->
+    <!-- Case item -->
+    <div class="flex flex-col xl:flex-row flex-wrap mb-10 xl:-mx-10">
+      <div class="w-full xl:w-1/2 relative xl:px-10">
+        <div class="absolute top-1/2 -translate-y-1/2 case-item-animation">
+          <div class="text-primary text-2xl font-title mb-6">Helen Marlen Mandarin</div>
+          <div class="w-full xl:w-3/4 text-lg opacity-75 mb-8">"... найбільший мультибренд мережі Helen Marlen Group, створений в кращих традиціях європейських open space ..."</div>
+          <div><a href="#" class="inline-block bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4"><?php _e("Читати історію повністю", "treba-wp"); ?></a></div>
         </div>
-        <!-- END Subitem -->
-        <!-- Subitem Ресторани -->
-        <div class="aromabussiness-item__child w-full flex justify-end treba-animate pl-12 mb-6">
-          <div class="w-full flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer">
-            <div class="flex items-center">
-              <div class="mr-6">
-                <div class="relative h-[75px]">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/welcome-bg.jpeg" width="175" class="rounded-l-2xl h-full object-cover">
-                  <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
-                </div>
-              </div>
-              <div class="mr-6">
-                <div class="w-[1px] h-[35px] bg-primary"></div>
-              </div>
-              <div>
-                <div class="text-2xl"><?php _e("Ресторани", "treba-wp"); ?></div>
-              </div>
-            </div>
-            <div class="px-8">
-              <div class="flex items-center bg-main-dark rounded-2xl px-8 py-3">
-                <div class="mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-75" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>  
+      </div>
+      <div class="w-full xl:w-1/2 xl:px-10">
+        <img src="https://static.tildacdn.com/tild3263-6339-4163-b836-353363663834/8aca5ec60a9d9231382e.JPG" alt="" loading="lazy" class="w-full h-76 object-cover rounded-2xl">
+      </div>
+    </div>
+    <!-- END Case item -->
+  </div>
+</div>
+
+<!-- Обладнання -->
+<div class="mb-32">
+  <div class="container">
+    <div class="flex flex-col justify-between items-center xl:flex-row">
+      <div>
+        <h2 class="text-4xl leading-12 text-center font-title treba-animate fade-up"><?php _e("Обладнання", "treba-wp"); ?></h2>
+      </div>
+      <div class="flex items-center -mx-2">
+        <div class="px-2"><div class="bg-main-gray hover:bg-primary rounded-2xl text-center cursor-pointer px-4 py-3"><?php _e("Аромадиспенсери", "treba-wp"); ?></div></div>
+        <div class="px-2"><div class="bg-main-gray hover:bg-primary rounded-2xl text-center cursor-pointer px-4 py-3"><?php _e("Аромапалочки", "treba-wp"); ?></div></div>
+        <div class="px-2"><div class="bg-main-gray hover:bg-primary rounded-2xl text-center cursor-pointer px-4 py-3"><?php _e("Для авто", "treba-wp"); ?></div></div>
+        <div class="px-2"><div class="bg-main-gray hover:bg-primary rounded-2xl text-center cursor-pointer px-4 py-3"><?php _e("Всі товари", "treba-wp"); ?></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Обладнання -->
+
+<div class="mb-20">
+  <div class="container">
+    <h2 class="text-4xl leading-12 font-title mb-6 treba-animate fade-up"><?php _e("Кейси наших кліентів", "treba-wp"); ?></h2>
+    <div class="w-full xl:w-2/3 text-lg opacity-75 mb-12 treba-animate fade-left"><?php _e("Scentair Technologies ароматизує понад 135,000 об'єктів по всьому світу, щонайменше в 4 рази випереджає конкурента №2, працює в індустрії арома маркетингу понад 25 років", "treba-wp"); ?></div>
+    <div class="swiper swiper-cases">
+      <div class="cases-list swiper-wrapper mb-12">
+        <?php 
+          $query = new WP_Query( array( 
+            'post_type' => 'cases', 
+            'posts_per_page' => 9,
+            'order'    => 'DESC',
+          ) );
+        if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+          <div class="swiper-slide">
+            <?php echo get_template_part('template-parts/components/case-card'); ?>
           </div>
+        <?php endwhile; endif; wp_reset_postdata(); ?>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+<div class="mb-40">
+  <div class="container">
+    <h2 class="text-4xl leading-12 text-center font-title mb-6 treba-animate fade-up"><?php _e("Наш блог", "treba-wp"); ?></h2>
+    <div class="flex items-center justify-center opacity-75 -mx-2 mb-10 treba-animate fade-up">
+      <div class="bg-primary w-6 h-[1px] px-2"></div>
+      <div class="px-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4"></div>
+      <div class="bg-primary w-6 h-[1px] px-2"></div>
+    </div>
+    <div class="flex flex-wrap -mx-6 mb-12">
+      <?php 
+        $query = new WP_Query( array( 
+          'post_type' => 'post', 
+          'posts_per_page' => 3,
+          'order'    => 'DESC',
+        ) );
+      if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+        <div class="w-full xl:w-1/3 xl:min-w-[250px] px-6">
+          <?php echo get_template_part('template-parts/components/blog-card'); ?>
         </div>
-        <!-- END Subitem -->
-        <!-- Subitem Офіси -->
-        <div class="aromabussiness-item__child w-full flex justify-end treba-animate pl-12 mb-6">
-          <div class="w-full flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer">
-            <div class="flex items-center">
-              <div class="mr-6">
-                <div class="relative h-[75px]">
-                  <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" width="175" class="rounded-l-2xl h-full object-cover">
-                  <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
-                </div>
-              </div>
-              <div class="mr-6">
-                <div class="w-[1px] h-[35px] bg-primary"></div>
-              </div>
-              <div>
-                <div class="text-2xl"><?php _e("Офіси", "treba-wp"); ?></div>
-              </div>
-            </div>
-            <div class="px-8">
-              <div class="flex items-center bg-main-dark rounded-2xl px-8 py-3">
-                <div class="mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-75" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+      <?php endwhile; endif; wp_reset_postdata(); ?>
+    </div>
+    <div class="w-full text-center mx-auto">
+      <div class="btn-primary inline-flex p-4">
+        <div class="relative bg-main-gray text-primary rounded-xl p-2 mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
         </div>
-        <!-- END Subitem -->
-        <!-- Subitem Нерухомість -->
-        <div class="aromabussiness-item__child w-full flex justify-end treba-animate pl-12 mb-6">
-          <div class="w-full flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer">
-            <div class="flex items-center">
-              <div class="mr-6">
-                <div class="relative h-[75px]">
-                  <img src="https://airq.com.ua/wp-content/uploads/2022/05/pexels-sevenstorm-juhaszimrus-443383.jpg" width="175" class="rounded-l-2xl h-full object-cover">
-                  <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
-                </div>
-              </div>
-              <div class="mr-6">
-                <div class="w-[1px] h-[35px] bg-primary"></div>
-              </div>
-              <div>
-                <div class="text-2xl"><?php _e("Нерухомість", "treba-wp"); ?></div>
-              </div>
-            </div>
-            <div class="px-8">
-              <div class="flex items-center bg-main-dark rounded-2xl px-8 py-3">
-                <div class="mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-75" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="relative text-xl mr-2"><?php _e("Більше дописів", "treba-wp"); ?></div>
+        <div class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
         </div>
-        <!-- END Subitem -->
-        <!-- Subitem -->
-        <div class="aromabussiness-item__child w-full flex justify-end treba-animate pl-12 mb-6">
-          <div class="w-full flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer">
-            <div class="flex items-center">
-              <div class="mr-6">
-                <div class="relative h-[75px]">
-                  <img src="https://airq.com.ua/wp-content/uploads/2022/05/why-kei-8e2gal_GIE8-unsplash.jpg" width="175" class="rounded-l-2xl h-full object-cover">
-                  <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
-                </div>
-              </div>
-              <div class="mr-6">
-                <div class="w-[1px] h-[35px] bg-primary"></div>
-              </div>
-              <div>
-                <div class="text-2xl"><?php _e("Автодилери", "treba-wp"); ?></div>
-              </div>
-            </div>
-            <div class="px-8">
-              <div class="flex items-center bg-main-dark rounded-2xl px-8 py-3">
-                <div class="mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-75" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END Subitem -->
       </div>
     </div>
   </div>

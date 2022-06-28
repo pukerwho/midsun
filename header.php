@@ -14,7 +14,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-  <div class="wrap overflow-hidden">
+  <div class="wrap ">
     <header class="header">
       <div class="container">
         <div class="w-full">

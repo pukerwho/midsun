@@ -88,6 +88,25 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   aromabrandingSubtitle.from('.aromabranding-subtitle', { translateY: '0%' });
   aromabrandingSubtitle.to('.aromabranding-subtitle', { translateY: '-100%' });
+  
+  // CASE ITEMS
+  // let caseItems = document.querySelectorAll('.case-item-animation');
+  // caseItems.forEach((item) => {
+  //   let caseItemContent = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: item,
+  //       scrub: true,
+  //       start: "bottom bottom",
+  //       end: "center 20%",
+  //       immediateRender: false,
+  //       markers: true
+  //     },
+  //   });
+  //   caseItemContent.from(item, { autoAlpha: 0  });
+  //   caseItemContent.to(item, { autoAlpha: 1  });
+  //   caseItemContent.to(item, { autoAlpha: 0  });
+  // });
+  
 
   gsap.timeline().to('.welcome-image', { className: 'welcome-image welcome-image-scroll show-treba' }, '+=0.25');
   gsap.timeline().to('.welcome-image-bg', { className: 'welcome-image-bg show-treba' }, '+=0.25');
