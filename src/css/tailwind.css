@@ -11,6 +11,6 @@ body { @apply bg-primary text-white p-2};
 .header .sub-menu { @apply bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4}
 .welcome-image { @apply relative rounded-xl }
 .welcome-image-bg { @apply w-full h-full absolute }
-.welcome-title { @apply text-5xl leading-16 }
-.welcome-description { @apply text-xl }
-.welcome-btn { @apply inline-flex p-4 }
+.welcome-title { @apply text-3xl xl:text-5xl xl:leading-16 }
+.welcome-description { @apply text-lg xl:text-xl }
+.welcome-btn { @apply inline-flex p-3 xl:p-4 }

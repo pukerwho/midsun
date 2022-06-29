@@ -29,8 +29,12 @@
                 'menu_class' => 'flex'
               ]); ?> 
             </div>
-            <div><a href="#" class="bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4"><?php _e("Зв'язатися з нами", "treba-wp"); ?></a></div>
-            <div class="xl:hidden">Menu-trigger</div>
+            <div class="hidden xl:block"><a href="#" class="bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4"><?php _e("Зв'язатися з нами", "treba-wp"); ?></a></div>
+            <div class="xl:hidden text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+            </svg>
+            </div>
           </div>
         </div>
       </div>

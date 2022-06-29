@@ -6,15 +6,15 @@ function tabRemove() {
     item.classList.add('hidden');
   })
   tabsBtn.forEach((tab) => {
-    tab.classList.remove('bg-blue-200');
-    tab.classList.add('bg-gray-200');
+    tab.classList.remove('bg-primary');
+    tab.classList.add('bg-main-gray');
   })
 }
 
 function tabAdd(tabContent, item) {
   tabContent.classList.remove('hidden');
-  item.classList.add('bg-blue-200')
-  item.classList.remove('bg-gray-200');
+  item.classList.add('bg-primary')
+  item.classList.remove('bg-main-gray');
 }
 
 tabsBtn.forEach((item) => {

@@ -112,14 +112,6 @@ a {
 	}
 }
 
-.cases {
-	&-list {
-		&::-webkit-scrollbar {
-			width: 0;
-			background: transparent;
-		}
-	}
-}
 .case {
 	&-item {
 		&:after {
@@ -154,6 +146,15 @@ a {
 				top: 0; left: 0;
 				background: linear-gradient(to bottom, transparent, #17171a);
 			}
+		}
+	}
+}
+
+.products {
+	&-tabs {
+		&::-webkit-scrollbar {
+			width: 0;
+			background: transparent;
 		}
 	}
 }

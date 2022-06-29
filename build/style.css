@@ -381,11 +381,6 @@ a:hover {
   display: flex;
 }
 
-.cases-list::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
-
 .case-item:after {
   content: "";
   width: 100%;
@@ -422,6 +417,11 @@ a:hover {
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#17171a));
   background: linear-gradient(to bottom, transparent, #17171a);
+}
+
+.products-tabs::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 /*!***********************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/swiper.min.css ***!
