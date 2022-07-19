@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: ГОЛОВНА
+*/
+?>
+
 <?php get_header(); ?>
 
 <!-- WELCOME BLOCK -->

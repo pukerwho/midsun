@@ -19,7 +19,8 @@
       <div class="container">
         <div class="w-full">
           <div class="flex justify-between items-center">
-            <div class="flex ">
+            <div class="flex relative">
+              <a href="<?php echo get_home_url(); ?>" class="absolute-link"></a>
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/midsun-logo.svg" alt="Logo" class="w-full h-[50px]">
             </div>
             <div class="hidden xl:block mainmenu">

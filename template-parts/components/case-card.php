@@ -1,4 +1,4 @@
-<div class="case-item relative rounded-2xl">
+<div class="case-item relative rounded-2xl z-1">
   <a href="<?php the_permalink(); ?>" class="absolute-link"></a>
   <div class="h-[250px] xl:h-[350px]">
     <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" loading="lazy" class="w-full h-full object-cover rounded-2xl rounded-b-3xl">

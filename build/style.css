@@ -284,6 +284,38 @@ a:hover {
   color: #d69928;
 }
 
+.divider {
+  background-image: url(307373c83e1ae83e2052.svg);
+  background-size: contain;
+}
+
+.content h2, .content h3, .content h4, .content h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+.content ul {
+  margin-bottom: 2rem;
+}
+
+.content li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content li:before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  background-color: #d69928;
+}
+
 [class*=" icon-"], [class^=icon-] {
   font-family: icomoon !important;
   speak: never;

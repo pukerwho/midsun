@@ -1,24 +1,10 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="hidden postID"><?php echo get_the_ID(); ?></div>
-
-<main id="primary" class="mb-20 py-10 xl:py-20" itemscope itemtype="http://schema.org/Article">
+<main id="primary" class="mb-20 py-10 xl:py-20">
   <div class="container">
     <div class="w-full xl:w-2/3 mx-auto">
-      <div class="relative mb-10">
-        <div class="w-full h-full absolute -left-2 -top-4" style="background: url( <?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-small.svg );">
-        </div>
-        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="w-full h-[350px] object-cover relative rounded-lg" loading="lazy" itemprop="image">
-      </div>
-      <h1 class="text-4xl font-title uppercase mb-10" itemprop="headline"><?php the_title(); ?></h1>
-      <div class="flex flex-wrap -mx-4 mb-4">
-        <?php
-        $post_categories = get_the_terms( $new_posts->ID, 'category' );
-        foreach ($post_categories as $post_category){ ?>
-          <div class="px-4"><a href="<?php echo get_term_link($post_category->term_id, 'category') ?>" class="inline-block bg-orange-100 text-black hover:text-black hover:bg-orange-200 rounded px-4 py-2 mb-2"><?php echo $post_category->name; ?></a></div>
-        <?php } ?>
-      </div>
+      <h1 class="text-4xl font-title uppercase mb-6"><?php the_title(); ?></h1>
       <div class="flex items-center text-sm text-gray-300 mb-6">
         <div class="mr-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -29,9 +15,20 @@
           <?php echo get_the_date('d.m.Y'); ?>
         </div>
       </div>
-      <div class="content mb-20" itemprop="articleBody"><?php the_content(); ?></div>
+      <div class="divider w-full h-[8px] mb-6"></div>
+      <div class="mb-10">
+        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="w-full h-[350px] object-cover relative rounded-lg" loading="lazy">
+      </div>
+      <div class="content mb-32">
+        <?php the_content(); ?>
+      </div>
     </div>
   </div>
+  <!-- Consultation -->
+  <div class="my-24">
+    <?php echo get_template_part('template-parts/components/consultation'); ?>
+  </div>
+  <!-- END Consultation -->
   <!-- Хлебные крошки -->
   <div class="border-y dark:border-none border-gray-900 py-3 mb-20">
     <div class="container">
@@ -45,8 +42,8 @@
               <meta itemprop="position" content="1">
             </li>
             <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs_item px-4">
-              <a itemprop="item" href="<?php echo get_post_type_archive_link('post'); ?>" class="text-orange-400 dark:text-orange-200">
-                <span itemprop="name"><?php _e( 'Блог', 'treba-wp' ); ?></span>
+              <a itemprop="item" href="<?php echo get_post_type_archive_link('cases'); ?>" class="text-orange-400 dark:text-orange-200">
+                <span itemprop="name"><?php _e( 'Кейси', 'treba-wp' ); ?></span>
               </a>                        
               <meta itemprop="position" content="2">
             </li>
@@ -61,31 +58,30 @@
   </div>
   <!-- END Хлебные крошки -->
 
+  <!-- Other cases -->
   <div class="container">
     <div class="w-full">
-      <!-- RELATED POSTS -->
       <div class="flex flex-wrap flex-col lg:flex-row">
-        <h2 class="text-3xl font-title mb-12"><?php _e('Рекомендовані статті', 'treba-wp'); ?></h2>
+        <h2 class="text-3xl font-title mb-12"><?php _e('Інші кейси', 'treba-wp'); ?></h2>
         <div class="flex flex-wrap -mx-6 mb-10 xl:mb-12">
           <?php 
             $current_id = get_the_ID();
             $query = new WP_Query( array( 
-              'post_type' => 'post', 
+              'post_type' => 'cases', 
               'posts_per_page' => 3,
               'order'    => 'DESC',
               'post__not_in' => array($current_id),
             ) );
           if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-            <div class="w-full xl:w-1/3 xl:min-w-[250px] px-6 mb-6 xl:mb-0">
-              <?php echo get_template_part('template-parts/components/blog-card'); ?>
+            <div class="w-full xl:w-1/3 px-6 mb-6 xl:mb-0">
+              <?php echo get_template_part('template-parts/components/case-card'); ?>
             </div>
           <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
       </div>
-      <!-- END LATEST POSTS -->
     </div>
   </div>
+  <!-- END Other cases -->
 </main>
-
 <?php endwhile; endif; wp_reset_postdata(); ?>
 <?php get_footer(); ?>
