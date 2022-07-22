@@ -19,13 +19,13 @@
       <div class="mb-10">
         <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="w-full h-[350px] object-cover relative rounded-lg" loading="lazy">
       </div>
-      <div class="content mb-32">
+      <div class="content mb-20 lg:mb-32">
         <?php the_content(); ?>
       </div>
     </div>
   </div>
   <!-- Consultation -->
-  <div class="my-24">
+  <div class="my-12 lg:my-24">
     <?php echo get_template_part('template-parts/components/consultation'); ?>
   </div>
   <!-- END Consultation -->
@@ -35,7 +35,7 @@
       <div class="w-full xl:w-2/3 flex items-center mx-auto">
         <div class="breadcrumbs text-sm text-gray-800 dark:text-gray-200" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
           <ul class="flex items-center flex-wrap -mx-4">
-            <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class="breadcrumbs_item px-4">
+            <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class="breadcrumbs_item px-4 pl-8 ml-4">
               <a itemprop="item" href="<?php echo home_url(); ?>" class="text-orange-400 dark:text-orange-200">
                 <span itemprop="name"><?php _e( 'Головна', 'treba-wp' ); ?></span>
               </a>                        
@@ -63,7 +63,7 @@
     <div class="w-full">
       <div class="flex flex-wrap flex-col lg:flex-row">
         <h2 class="text-3xl font-title mb-12"><?php _e('Інші кейси', 'treba-wp'); ?></h2>
-        <div class="flex flex-wrap -mx-6 mb-10 xl:mb-12">
+        <div class="flex flex-wrap -mx-6">
           <?php 
             $current_id = get_the_ID();
             $query = new WP_Query( array( 

@@ -8,7 +8,7 @@ Template Name: БЛОГ
 
 <div class="mb-20 py-10 xl:py-20">
   <div class="container">
-    <h2 class="text-3xl xl:text-4xl xl:leading-12 text-center font-title mb-6 treba-animate fade-up"><?php _e("Наш блог", "treba-wp"); ?></h2>
+    <h1 class="text-3xl xl:text-4xl xl:leading-12 text-center font-title mb-6 treba-animate fade-up"><?php _e("Наш блог", "treba-wp"); ?></h1>
     <div class="flex items-center justify-center opacity-75 -mx-2 mb-10 treba-animate fade-up">
       <div class="bg-primary w-6 h-[1px] px-2"></div>
       <div class="px-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4"></div>

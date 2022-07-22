@@ -10,11 +10,14 @@ function crb_post_theme_options() {
     ->add_fields( array(
       // Field::make( 'text', 'crb_post_timetoread', 'Time to read'),
   ) );
-  // Container::make( 'post_meta', 'More' )
-  //   ->where( 'post_type', '=', 'questions' )
-  //   ->add_fields( array(
-  //     Field::make( 'checkbox', 'crb_q_solved', 'Решено?' ),
-  // ) );  
+  Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'products' )
+    ->add_fields( array(
+      Field::make( 'complex', 'crb_product_content', 'Blocks' )->set_layout('tabbed-horizontal')->add_fields( array(
+        Field::make( 'text', 'crb_product_content_title', 'Заголовок' ),
+        Field::make( 'rich_text', 'crb_product_content_text', 'Текст' ),
+      )),
+  ) );  
 }
 
 ?>

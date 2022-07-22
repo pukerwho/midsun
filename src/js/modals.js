@@ -1,33 +1,28 @@
 // Modals
-function openModal(dataModal) {
-  let currentModal = document.querySelector('.modal[data-modal="'+dataModal+'"]');
-  currentModal.classList.add('open');
+function openModal(attrModal) {
+  $('.modal[data-modal='+attrModal+']').addClass('open');
+  $('.modal-bg').removeClass('hidden');
+  $('body').addClass('overflow-hidden');
 }
 
-function closeModal() {
-  let modalAll = document.querySelectorAll('.modal');
-  modalAll.forEach(el => {
-    el.classList.remove('open');
-  });
+function closeModal(attrModal) {
+  $('.modal').removeClass('open');
+  $('.modal-bg').addClass('hidden');
+  $('body').removeClass('overflow-hidden');
 }
 
-let modalClick = document.querySelectorAll('.modal-js');
-modalClick.forEach(el => {
-  el.addEventListener('click', function () {
-    let dataModal = this.dataset.modalClick;
-    openModal(dataModal);
-  });
+$('.modal-js').on('click', function(e){
+  var clickModalData = $(this).data('modal');
+  var clickModalTitle = $(this).data('title');
+  openModal(clickModalData);
 });
 
-let modalClickClose = document.querySelectorAll('.modal-close-js');
-modalClickClose.forEach(el => {
-  el.addEventListener('click', function () {
+$('.modal_content_close').on('click', function(){
+  closeModal();
+});
+
+document.addEventListener('click', function(e){
+  if(e.target.classList.value === 'modal open') {
     closeModal();
-  });
-});
-
-document.addEventListener('click', function (e) {
-  if (e.target.classList.value === 'modal open') {
-    closeModal(dataModal);
   }
 });
