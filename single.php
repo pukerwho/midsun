@@ -14,7 +14,7 @@
       <h1 class="text-4xl font-title uppercase mb-10" itemprop="headline"><?php the_title(); ?></h1>
       <div class="flex flex-wrap -mx-4 mb-4">
         <?php
-        $post_categories = get_the_terms( $new_posts->ID, 'category' );
+        $post_categories = get_the_terms( get_the_ID(), 'category' );
         foreach ($post_categories as $post_category){ ?>
           <div class="px-4"><a href="<?php echo get_term_link($post_category->term_id, 'category') ?>" class="inline-block bg-orange-100 text-black hover:text-black hover:bg-orange-200 rounded px-4 py-2 mb-2"><?php echo $post_category->name; ?></a></div>
         <?php } ?>
