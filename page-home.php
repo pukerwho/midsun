@@ -7,7 +7,7 @@ Template Name: ГОЛОВНА
 <?php get_header(); ?>
 
 <!-- WELCOME BLOCK -->
-<div class="welcome container">
+<div class="welcome container pt-24">
   <div class="w-full py-10 xl:py-20">
     <div class="flex flex-wrap flex-col xl:flex-row xl:items-center xl:-mx-10">
       <div class="w-full xl:w-1/2 xl:px-10">

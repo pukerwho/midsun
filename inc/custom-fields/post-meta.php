@@ -17,6 +17,15 @@ function crb_post_theme_options() {
         Field::make( 'text', 'crb_product_content_title', 'Заголовок' ),
         Field::make( 'rich_text', 'crb_product_content_text', 'Текст' ),
       )),
+  ) ); 
+  Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'services' )
+    ->add_fields( array(
+      Field::make( 'textarea', 'crb_service_description', 'Короткий опис' ),
+      Field::make( 'complex', 'crb_service_blocks', 'Блоки' )->set_layout('tabbed-horizontal')->add_fields( array(
+        Field::make( 'image', 'crb_service_blocks_img', 'Зображення' )->set_value_type( 'url'),
+        Field::make( 'rich_text', 'crb_service_blocks_content', 'Текст' ),
+      )),
   ) );  
 }
 
