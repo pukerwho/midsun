@@ -134,7 +134,7 @@
               $menu_list = '<ul id="menu-' . $menu_name . '" class="flex flex-col">';
               foreach ( (array) $menu_items as $key => $menu_item ){
                 $menu_emoji = '' . get_stylesheet_directory_uri() . '/images/aroma-pattern-item.svg';
-                $menu_list .= '<li class="flex items-center relative mb-4"><a href="' . $menu_item->url . '" class="absolute-link"></a><img src="'. $menu_emoji .'" class="w-4 h-4 mr-4"><span></span>' . $menu_item->title . '</li>';
+                $menu_list .= '<li class="flex items-center relative mb-4"><a href="' . $menu_item->url . '" class="absolute-link"></a><img src="'. $menu_emoji .'" class="w-4 h-4 mr-4"><span>' . $menu_item->title . '</span></li>';
               }
               $menu_list .= '</ul>';
             }

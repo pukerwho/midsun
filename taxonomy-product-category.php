@@ -17,13 +17,26 @@
           <div class="sticky top-6">
             <div class="text-2xl font-title mb-6"><?php _e("Категоріі", "treba-wp"); ?></div>
             <div class="mb-12">
-              <?php foreach($categories as $category): ?>
-                <div class="flex items-center relative hover:text-primary mb-4">
-                  <a href="<?php echo get_term_link($category->term_id, 'product-category') ?>" class="absolute-link"></a>
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4 mr-4">
-                  <span class="text-lg"><?php echo $category->name; ?></span>
-                </div>
-              <?php endforeach; ?>
+              <?php
+                $menu_name = 'products_menu';
+                $locations = get_nav_menu_locations();
+
+                if( $locations && isset( $locations[ $menu_name ] ) ){
+                  $menu_items = wp_get_nav_menu_items( $locations[ $menu_name ] );
+
+                  $menu_list = '<ul id="menu-' . $menu_name . '" class="flex flex-col">';
+                  foreach ( (array) $menu_items as $key => $menu_item ){
+                    $menu_emoji = '' . get_stylesheet_directory_uri() . '/images/aroma-pattern-item.svg';
+                    $menu_list .= '<li class="flex items-center relative mb-4"><a href="' . $menu_item->url . '" class="absolute-link"></a><img src="'. $menu_emoji .'" class="w-4 h-4 mr-4"><span class="text-lg">' . $menu_item->title . '</span></li>';
+                  }
+                  $menu_list .= '</ul>';
+                }
+                else {
+                  $menu_list = '<ul><li>Меню "' . $menu_name . '" не определено.</li></ul>';
+                }
+
+                echo $menu_list;
+              ?>
             </div>
             <div class="divider w-full h-[8px] mb-12"></div>
             <div>
