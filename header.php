@@ -7,7 +7,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 	<?php echo carbon_get_theme_option('crb_google_analytics'); ?>
 </head>
