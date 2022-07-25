@@ -17,7 +17,7 @@ $('.modal-js').on('click', function(e){
   openModal(clickModalData);
 });
 
-$('.modal_content_close').on('click', function(){
+$('.modal-close-js').on('click', function(){
   closeModal();
 });
 

@@ -45,6 +45,7 @@ function crb_load() {
     require_once get_template_directory() . '/inc/custom-fields/settings-meta.php';
     require_once get_template_directory() . '/inc/custom-fields/post-meta.php';
     require_once get_template_directory() . '/inc/custom-fields/page-meta.php';
+    require_once get_template_directory() . '/inc/custom-fields/term-meta.php';
 }
 
 remove_action('wp_head', 'print_emoji_detection_script', 7);

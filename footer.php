@@ -94,7 +94,7 @@
 <!-- MODAL CONTACT -->
 <div class="modal" data-modal="contact">
   <div class="modal_content w-4/5 lg:w-2/3 bg-main-dark rounded-xl">
-    <div class="modal_content_close">
+    <div class="modal_content_close modal-close-js">
       ✖️
     </div>
     <div class="mt-6">
@@ -108,6 +108,53 @@
   </div>
 </div>
 <!-- END MODAL CONTACT -->
+
+<div class="modal" data-modal="menu">
+  <div class="modal_content w-full h-screen">
+    <div class="h-full bg-main-gray rounded-xl p-4">
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex relative">
+          <a href="<?php echo get_home_url(); ?>" class="absolute-link"></a>
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/midsun-logo.svg" alt="Logo" class="w-full h-[50px]">
+        </div>
+        <div class="text-white text-lg modal-close-js">
+          ✖️
+        </div>
+      </div>
+      <div>
+        <div class="text-2xl font-title mb-6"><?php _e("Меню", "treba-wp"); ?></div>
+        <div class="mb-12">
+          <?php
+            $menu_name = 'header';
+            $locations = get_nav_menu_locations();
+
+            if( $locations && isset( $locations[ $menu_name ] ) ){
+              $menu_items = wp_get_nav_menu_items( $locations[ $menu_name ] );
+
+              $menu_list = '<ul id="menu-' . $menu_name . '" class="flex flex-col">';
+              foreach ( (array) $menu_items as $key => $menu_item ){
+                $menu_emoji = '' . get_stylesheet_directory_uri() . '/images/aroma-pattern-item.svg';
+                $menu_list .= '<li class="flex items-center relative mb-4"><a href="' . $menu_item->url . '" class="absolute-link"></a><img src="'. $menu_emoji .'" class="w-4 h-4 mr-4"><span></span>' . $menu_item->title . '</li>';
+              }
+              $menu_list .= '</ul>';
+            }
+            else {
+              $menu_list = '<ul><li>Меню "' . $menu_name . '" не определено.</li></ul>';
+            }
+
+            echo $menu_list;
+          ?>
+        </div>
+        <div class="text-2xl font-title mb-6"><?php _e("Мова", "treba-wp"); ?></div>
+        <div class="lang text-sm flex">
+          <?php if (function_exists('pll_the_languages')) { 
+            pll_the_languages(); 
+          } ?>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
 
 <div class="modal-bg hidden"></div>
 

@@ -6,9 +6,10 @@ use Carbon_Fields\Field;
 add_action( 'carbon_fields_register_fields', 'crb_term_options' );
 function crb_term_options() {
   Container::make( 'term_meta', __( 'Term Options', 'crb' ) )
-  ->where( 'term_taxonomy', '=', 'region' ) // only show our new field for categories
+  ->where( 'term_taxonomy', '=', 'services-category' )
   ->add_fields( array(
-    Field::make( 'image', 'crb_region_img', 'Заглавная картинка' )->set_value_type( 'url'),
+    Field::make( 'image', 'crb_services_cat_image', 'Заглавная картинка' ),
+    Field::make( 'rich_text', 'crb_services_cat_content', 'Текст' ),
   ));
 
   Container::make( 'term_meta', __( 'City Options', 'crb' ) )

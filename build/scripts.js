@@ -88,7 +88,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
   \**************************/
 /***/ (function() {
 
-eval("// Modals\nfunction openModal(attrModal) {\n  $('.modal[data-modal='+attrModal+']').addClass('open');\n  $('.modal-bg').removeClass('hidden');\n  $('body').addClass('overflow-hidden');\n}\n\nfunction closeModal(attrModal) {\n  $('.modal').removeClass('open');\n  $('.modal-bg').addClass('hidden');\n  $('body').removeClass('overflow-hidden');\n}\n\n$('.modal-js').on('click', function(e){\n  var clickModalData = $(this).data('modal');\n  var clickModalTitle = $(this).data('title');\n  openModal(clickModalData);\n});\n\n$('.modal_content_close').on('click', function(){\n  closeModal();\n});\n\ndocument.addEventListener('click', function(e){\n  if(e.target.classList.value === 'modal open') {\n    closeModal();\n  }\n});\n\n//# sourceURL=webpack://world/./src/js/modals.js?");
+eval("// Modals\nfunction openModal(attrModal) {\n  $('.modal[data-modal='+attrModal+']').addClass('open');\n  $('.modal-bg').removeClass('hidden');\n  $('body').addClass('overflow-hidden');\n}\n\nfunction closeModal(attrModal) {\n  $('.modal').removeClass('open');\n  $('.modal-bg').addClass('hidden');\n  $('body').removeClass('overflow-hidden');\n}\n\n$('.modal-js').on('click', function(e){\n  var clickModalData = $(this).data('modal');\n  var clickModalTitle = $(this).data('title');\n  openModal(clickModalData);\n});\n\n$('.modal-close-js').on('click', function(){\n  closeModal();\n});\n\ndocument.addEventListener('click', function(e){\n  if(e.target.classList.value === 'modal open') {\n    closeModal();\n  }\n});\n\n//# sourceURL=webpack://world/./src/js/modals.js?");
 
 /***/ }),
 

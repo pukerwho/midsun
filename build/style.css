@@ -374,6 +374,19 @@ a:hover {
   background-color: #d69928;
 }
 
+.lang-item {
+  list-style-type: none;
+}
+
+.lang-item a {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.lang-item.current-lang a {
+  border: 1px solid #d69929;
+}
+
 .aromabussiness-item__parent {
   position: relative;
   z-index: 1;

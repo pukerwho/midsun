@@ -23,6 +23,16 @@ function crb_page_theme_options() {
         Field::make( 'text', 'crb_about_blocks_btn', 'Текст кнопки' ),
       )),
   ) );
+
+  Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'page' )
+    ->add_fields( array(
+      Field::make( 'textarea', 'crb_page_description', 'Короткий опис' ),
+      Field::make( 'complex', 'crb_page_blocks', 'Блоки' )->set_layout('tabbed-horizontal')->add_fields( array(
+        Field::make( 'image', 'crb_page_blocks_img', 'Зображення' ),
+        Field::make( 'rich_text', 'crb_page_blocks_content', 'Текст' ),
+      )),
+  ) );
 }
 
 ?>

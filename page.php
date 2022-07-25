@@ -19,7 +19,7 @@
     <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-slate-800/90 to-main-dark"></div>
     <div class="absolute left-1/2 bottom-0 -translate-x-1/2">
       <h1 class="text-4xl font-title text-center uppercase mb-12"><?php the_title(); ?></h1>
-      <div class="text-xl opacity-75"><?php echo carbon_get_the_post_meta('crb_service_description'); ?></div>
+      <div class="text-xl opacity-75"><?php echo carbon_get_the_post_meta('crb_page_description'); ?></div>
     </div>
   </div>
   <div class="flex items-center justify-center opacity-75 -mx-2 mb-20 treba-animate fade-up">
@@ -47,21 +47,32 @@
       </div>
     </div>
     <!-- Блоки Текст+Картинка -->
-    <div>
+    <div class="mb-32">
       <?php
-        $items = carbon_get_the_post_meta('crb_service_blocks');
+        $items = carbon_get_the_post_meta('crb_page_blocks');
         foreach ($items as $item):
       ?>
         <div class="flex flex-col odd:xl:flex-row even:xl:flex-row-reverse xl:-mx-10 mb-20 last:mb-6">
           <div class="w-full xl:w-1/2 xl:px-10 mb-12 xl:mb-0">
+            <?php 
+              $photo_block_medium = wp_get_attachment_image_src( $item['crb_page_blocks_img'], 'medium' ); 
+              $photo_block_large = wp_get_attachment_image_src( $item['crb_page_blocks_img'], 'large' );
+              $photo_block_full = wp_get_attachment_image_src( $item['crb_page_blocks_img'], 'full' );
+            ?>
             <div>
-              <img src="<?php echo $item['crb_service_blocks_img']; ?>" alt="" loading="lazy" class="w-full h-full object-cover rounded-xl">
+              <img srcset="<?php echo $photo_block_medium[0]; ?> 767w, 
+              <?php echo $photo_block_large[0]; ?> 1280w,
+              <?php echo $photo_block_full[0]; ?> 1440w"
+              sizes="(max-width: 767px) 767px,
+              (max-width: 1280px) 1280px,
+              1440px"
+              src="<?php echo $photo_block_full[0]; ?>" alt="<?php the_title(); ?>" loading="lazy" class="w-full h-full object-cover rounded-xl">
             </div>
           </div>
           <div class="w-full xl:w-1/2 xl:px-10">
             <div class="content mb-12">
               <?php 
-                $text = $item['crb_service_blocks_content'];
+                $text = $item['crb_page_blocks_content'];
                 echo apply_filters( 'the_content', $text  ); 
                 unset($text);
               ?>
@@ -71,25 +82,6 @@
       <?php endforeach; ?>
     </div>
     <!-- END Блоки Текст+Картинка -->
-
-    <!-- Other services -->
-    <div class="mb-20">
-      <h2 class="text-3xl font-title mb-12"><?php _e("Схожі послуги", "treba-wp"); ?></h2>
-      <div class="flex flex-wrap">
-        <?php 
-          $current_id = get_the_ID();
-          $query = new WP_Query( array( 
-            'post_type' => 'services', 
-            'posts_per_page' => 5,
-            'order'    => 'DESC',
-            'post__not_in' => array($current_id),
-          ) );
-        if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-          <?php echo get_template_part('template-parts/aromaitems/aromaitems-card'); ?>
-        <?php endwhile; endif; wp_reset_postdata(); ?>
-      </div>
-    </div>
-    <!-- END Other services -->
 
     <!-- Cases -->
     <div class="flex flex-wrap flex-col lg:flex-row mb-40">

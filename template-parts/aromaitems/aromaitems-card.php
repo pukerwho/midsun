@@ -1,21 +1,21 @@
-<div class="w-full h-[75px] flex justify-end mb-6">
-  <div class="w-full flex justify-between items-center bg-main-gray rounded-2xl cursor-pointer">
-    <div class="flex items-center">
+<div class="w-full h-full flex justify-end mb-6">
+  <div class="w-full flex flex-col xl:flex-row xl:justify-between xl:items-center bg-main-gray rounded-2xl cursor-pointer p-4 xl:p-0">
+    <div class="flex items-center mb-6 xl:mb-0">
       <div class="mr-4 xl:mr-6">
         <div class="relative h-[75px]">
-          <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="w-[50px] min-w-[50px] xl:w-[175px] xl:min-w-[175px] rounded-l-2xl h-full object-cover">
-          <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="w-[75px] min-w-[75px] xl:w-[175px] xl:min-w-[175px] rounded-2xl xl:rounded-l-2xl h-full object-cover">
+          <div class="hidden xl:block w-full h-full absolute top-0 left-0 bg-gradient-to-l from-main-gray via-main-dark/75 rounded-l-2xl"></div>
         </div>
       </div>
       <div class="mr-4 xl:mr-6">
         <div class="w-[1px] h-[35px] bg-primary"></div>
       </div>
       <div>
-        <div class="text-xl xl:text-2xl"><?php the_title(); ?></div>
+        <div class="text-lg xl:text-2xl"><?php the_title(); ?></div>
       </div>
     </div>
-    <div class="px-6 xl:px-8">
-      <div class="relative flex items-center bg-main-dark rounded-2xl px-4 xl:px-8 py-3">
+    <div class="px-0 xl:px-8">
+      <div class="relative flex items-center justify-center bg-main-dark rounded-2xl px-4 xl:px-8 py-3">
         <a href="<?php the_permalink(); ?>" class="absolute-link"></a>
         <div class="text-sm xl:text-base mr-2"><?php _e("Детальніше", "treba-wp"); ?></div>
         <div>

@@ -110,6 +110,21 @@ a {
 	}
 }
 
+.lang {
+	&-item {
+		list-style-type: none;
+		a {
+			border-radius: 0.5rem;
+			padding: 0.5rem;
+		}
+		&.current-lang  {
+			a {
+				border: 1px solid #d69929;
+			}
+		}
+	}
+}
+
 .aromabussiness-item {
 	&__parent {
 		position: relative;
