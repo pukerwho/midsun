@@ -328,7 +328,7 @@ a:hover {
   margin-left: 1.25rem;
 }
 
-.content blockquote {
+.content blockquote.wp-block-quote {
   position: relative;
   background-color: #17171a;
   border-left: 2px solid #d69928;
@@ -336,7 +336,7 @@ a:hover {
   padding: 2rem;
 }
 
-.content blockquote:before {
+.content blockquote.wp-block-quote:before {
   content: "";
   width: 44px;
   height: 44px;
@@ -350,7 +350,7 @@ a:hover {
   opacity: 0.15;
 }
 
-.content blockquote:after {
+.content blockquote.wp-block-quote:after {
   content: "";
   width: 44px;
   height: 44px;
@@ -362,12 +362,12 @@ a:hover {
   opacity: 0.15;
 }
 
-.content blockquote p {
+.content blockquote.wp-block-quote p {
   position: relative;
   z-index: 1;
 }
 
-.content blockquote cite {
+.content blockquote.wp-block-quote cite {
   width: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
