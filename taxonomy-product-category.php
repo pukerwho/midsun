@@ -51,8 +51,8 @@
               $current_page = !empty( $_GET['page'] ) ? $_GET['page'] : 1;
               $query = new WP_Query( array( 
                 'post_type' => 'products', 
-                'posts_per_page' => 8,
-                'order'    => 'ASC',
+                'posts_per_page' => 10,
+                'order'    => 'DESC',
                 'paged' => $current_page,
                 'tax_query' => array(
                   array(

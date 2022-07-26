@@ -32,6 +32,10 @@
         <div class="content mb-20" itemprop="articleBody"><?php the_content(); ?></div>
       </div>
     </div>
+    <!-- Consultation -->
+    <div class="my-12 lg:my-24">
+      <?php echo get_template_part('template-parts/components/consultation'); ?>
+    </div>
     <!-- Хлебные крошки -->
     <div class="border-y dark:border-none border-gray-900 py-3 mb-20">
       <div class="container">

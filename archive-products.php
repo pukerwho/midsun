@@ -45,8 +45,8 @@
             <?php 
               $query = new WP_Query( array( 
                 'post_type' => 'products', 
-                'posts_per_page' => 8,
-                'order'    => 'ASC',
+                'posts_per_page' => 10,
+                'order'    => 'DESC',
               ) );
             if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
               <div class="w-1/2 px-4 mb-6">
