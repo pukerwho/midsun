@@ -328,6 +328,54 @@ a:hover {
   margin-left: 1.25rem;
 }
 
+.content blockquote {
+  position: relative;
+  background-color: #17171a;
+  border-left: 2px solid #d69928;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.content blockquote:before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  background: url(2b423fc884dabca8c610.svg);
+  background-size: contain;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  opacity: 0.15;
+}
+
+.content blockquote:after {
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  background: url(2b423fc884dabca8c610.svg);
+  background-size: contain;
+  opacity: 0.15;
+}
+
+.content blockquote p {
+  position: relative;
+  z-index: 1;
+}
+
+.content blockquote cite {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-top: 2rem;
+}
+
 [class*=" icon-"], [class^=icon-] {
   font-family: icomoon !important;
   speak: never;

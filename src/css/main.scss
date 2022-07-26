@@ -61,7 +61,43 @@ a {
 			margin-left: 1.25rem;
 		}
 	}
-	
+	blockquote {
+		position: relative;
+		background-color: #17171a;
+		border-left: 2px solid #d69928;
+		border-radius: 1rem;
+		padding: 2rem;
+		&:before {
+			content: "";
+			width: 44px;
+			height: 44px;
+			position: absolute;
+			left: 25px; top: 25px;
+			background: url('../../images/quote.svg');
+			background-size: contain;
+			transform: rotate(180deg);
+			opacity: 0.15;
+		}
+		&:after {
+			content: "";
+			width: 44px;
+			height: 44px;
+			position: absolute;
+			right: 25px; bottom: 25px;
+			background: url('../../images/quote.svg');
+			background-size: contain;
+			opacity: 0.15;			
+		}
+		p {
+			position: relative;
+			z-index: 1;
+		}
+		cite {
+			width: 100%;
+			display: inline-flex;
+			margin-top: 2rem;
+		}
+	}
 }
 
 [class*=" icon-"], [class^=icon-] {
