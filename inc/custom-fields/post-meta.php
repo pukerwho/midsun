@@ -13,6 +13,7 @@ function crb_post_theme_options() {
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'products' )
     ->add_fields( array(
+      Field::make( 'media_gallery', 'crb_product_gallery', 'Галерея' )->set_type( array( 'image' ) ),
       Field::make( 'complex', 'crb_product_content', 'Blocks' )->set_layout('tabbed-horizontal')->add_fields( array(
         Field::make( 'text', 'crb_product_content_title', 'Заголовок' ),
         Field::make( 'rich_text', 'crb_product_content_text', 'Текст' ),
