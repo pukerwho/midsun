@@ -1,5 +1,6 @@
 <?php 
   get_header();
+  $taxonomyName = 'services-category'; 
   $current_cat_id = get_queried_object_id();
   $categories = get_terms(array( 'taxonomy' => 'services-category', 'empty' => true ));
 ?>
@@ -34,7 +35,10 @@
   <div class="flex flex-wrap flex-col xl:flex-row xl:-mx-10 mb-20">
     <div class="w-full xl:w-2/3 xl:px-10">
       <div class="content">
-        <?php echo carbon_get_term_meta($current_cat_id, 'crb_services_cat_content'); ?>
+        <?php 
+          $categoryText = carbon_get_term_meta($current_cat_id, 'crb_services_cat_content');
+          echo apply_filters( 'the_content', $categoryText  ); 
+        ?>
       </div>
     </div>
     <div class="w-full xl:w-1/3 xl:px-10">
@@ -49,6 +53,29 @@
       </div>
     </div>
   </div>
+
+  <?php $termchildren = get_term_children( $current_cat_id, $taxonomyName );
+  if ($termchildren): ?>
+    <div class="mb-20">
+      <div class="flex flex-wrap xl:-mx-4">
+
+      <?php foreach ( $termchildren as $child ): ?>
+        <?php $term = get_term_by( 'id', $child, $taxonomyName ); ?>
+        <div class="w-full xl:w-1/4 xl:px-4">
+          <div class="flex items-center bg-main-gray relative rounded-xl border-l-2 border-primary p-4">
+            <a href="<?php echo get_term_link( $child, $taxonomyName ); ?>" class="absolute-link"></a>
+            <div class="mr-4">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-icon.svg" class="w-10 h-10">
+            </div>
+            <div class="text-lg font-title">
+              <?php echo $term->name; ?>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+      </div>
+    </div>
+  <?php endif; ?>
 
   <!-- Services -->
   <div class="mb-20">
