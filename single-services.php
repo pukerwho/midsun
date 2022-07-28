@@ -74,7 +74,7 @@
 
     <!-- GALLERY -->
     <?php if (carbon_get_the_post_meta('crb_service_gallery')): ?>
-    <div class="mb-32">
+    <div class="mb-20">
       <div class="text-3xl font-title mb-6"><?php _e("Галерея", "treba-wp"); ?></div>
       <div class="flex flex-wrap -mx-2 xl:-mx-4">
         <?php 
@@ -86,7 +86,7 @@
               $photo_src_medium = wp_get_attachment_image_src($services_photo, 'medium'); 
             ?>
             <a href="<?php echo $photo_src_large[0]; ?>" data-lightbox="wow-gallery" data-title="<?php the_title(); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
-            <img src="<?php echo $photo_src_medium[0]; ?>" loading="lazy" class="h-full">
+            <img src="<?php echo $photo_src_medium[0]; ?>" loading="lazy" class="object-cover h-[225px]">
           </div>
         <?php endforeach; ?>
       </div>

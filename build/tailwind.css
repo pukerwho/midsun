@@ -863,6 +863,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 185px;
 }
 
+.h-\[225px\] {
+  height: 225px;
+}
+
 .min-h-\[185px\] {
   min-height: 185px;
 }
