@@ -22,14 +22,14 @@
       <div class="text-xl opacity-75"><?php echo carbon_get_the_post_meta('crb_service_description'); ?></div>
     </div>
   </div>
-  <div class="flex items-center justify-center opacity-75 -mx-2 mb-20 treba-animate fade-up">
+  <div class="flex items-center justify-center opacity-75 -mx-2 mb-12 xl:mb-20 treba-animate fade-up">
     <div class="bg-primary w-6 h-[1px] px-2"></div>
     <div class="px-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4"></div>
     <div class="bg-primary w-6 h-[1px] px-2"></div>
   </div>
   <div class="container mb-20">
     <div class="flex flex-wrap flex-col xl:flex-row xl:-mx-10 mb-20">
-      <div class="w-full xl:w-2/3 xl:px-10">
+      <div class="w-full xl:w-2/3 xl:px-10 mb-20 xl:mb-0">
         <div class="content">
           <?php the_content(); ?>
         </div>
@@ -47,7 +47,7 @@
       </div>
     </div>
     <!-- Блоки Текст+Картинка -->
-    <div>
+    <div class="mb-20">
       <?php
         $items = carbon_get_the_post_meta('crb_service_blocks');
         foreach ($items as $item):
@@ -58,7 +58,7 @@
               <img src="<?php echo $item['crb_service_blocks_img']; ?>" alt="" loading="lazy" class="w-full h-full object-cover rounded-xl">
             </div>
           </div>
-          <div class="w-full xl:w-1/2 xl:px-10">
+          <div class="w-full xl:w-1/2 xl:px-10 mb-20 xl:mb-0">
             <div class="content mb-12">
               <?php 
                 $text = $item['crb_service_blocks_content'];
@@ -66,6 +66,21 @@
                 unset($text);
               ?>
             </div>
+            <?php if ($item['crb_service_blocks_btn']): ?>
+              <div class="btn-primary relative inline-flex p-3 xl:p-4 modal-js" data-modal="menu">
+                <div class="relative bg-main-gray text-primary rounded-xl p-2 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 xl:h-6 w-6 xl:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                </div>
+                <div class="relative text-lg xl:text-xl mr-2"><?php echo $item['crb_service_blocks_btn']; ?></div>
+                <div class="relative">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            <?php endif; ?>
           </div>
         </div>
       <?php endforeach; ?>

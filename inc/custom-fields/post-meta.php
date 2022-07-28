@@ -26,6 +26,7 @@ function crb_post_theme_options() {
       Field::make( 'complex', 'crb_service_blocks', 'Блоки' )->set_layout('tabbed-horizontal')->add_fields( array(
         Field::make( 'image', 'crb_service_blocks_img', 'Зображення' )->set_value_type( 'url'),
         Field::make( 'rich_text', 'crb_service_blocks_content', 'Текст' ),
+        Field::make( 'text', 'crb_service_blocks_btn', 'Текст кнопки' ),
       )),
       Field::make( 'media_gallery', 'crb_service_gallery', 'Галерея' )->set_type( array( 'image' ) ),
   ) );  
