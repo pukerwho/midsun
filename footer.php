@@ -14,10 +14,10 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/midsun-logo.svg" alt="Logo" class="h-[50px]">
           </div>
           <div class="text-lg xl:text-xl mb-6">
-            Зміцнюйте ідентичність бренду ароматом. Покращуйте емоційний досвід клієнтів.
+            <?php _e("Зміцнюйте ідентичність бренду ароматом. Покращуйте емоційний досвід клієнтів.", "treba-wp"); ?>
           </div>
           <div class="text-sm opacity-75">
-            © Scentair Technologies Inc. & ТОВ «Мідсан». Всі права захищені. Будь-яке копіювання матеріалів дозволяється лише з згоди правовласників. З усіх питань звертайтеся: info@midsun.com.ua
+            © Scentair Technologies Inc. & ТОВ «Мідсан». <?php _e("Всі права захищені. Будь-яке копіювання матеріалів дозволяється лише з згоди правовласників. З усіх питань звертайтеся:", "treba-wp"); ?> info@midsun.com.ua
           </div>
         </div>
         <div class="w-full xl:w-1/6 xl:px-5 mb-6 xl:mb-0">

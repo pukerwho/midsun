@@ -107,7 +107,7 @@
     <div class="container">
       <div class="w-full">
         <div class="flex flex-wrap flex-col lg:flex-row">
-          <h2 class="text-3xl font-title mb-12"><?php _e('Інше обладнення', 'treba-wp'); ?></h2>
+          <h2 class="text-3xl font-title mb-12"><?php _e('Інше обладнання', 'treba-wp'); ?></h2>
           <div class="flex flex-wrap -mx-6">
             <?php 
               $current_id = get_the_ID();

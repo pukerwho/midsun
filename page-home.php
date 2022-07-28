@@ -59,14 +59,14 @@ Template Name: ГОЛОВНА
         <div class="font-title text-3xl xl:text-4xl xl:leading-12 mb-6"><?php _e("Лише 1 з 4 брендів виділяється споживачами", "treba-wp"); ?>.</div>
         <div class="block-top-animate text-lg mb-6">
           <div class="opacity-80">
-            Кожна взаємодія має значення. У цифрову епоху особисті контакти на вашій території важать значно більше, ніж звичайні транзакції. Важливий емоційний досвід. Проте споживачі повідомляють, що лише один з 4 брендів відрізняється від конкурентів. <span class="text-primary">Будьте серед 25-ти кращих зі 100, що виділяються для споживачів.</span> Арома маркетинг дає змогу компаніям виокремити себе завдяки потужним враженням в місцях контакту з клієнтами
+            <?php _e("Кожна взаємодія має значення. У цифрову епоху особисті контакти на вашій території важать значно більше, ніж звичайні транзакції. Важливий емоційний досвід. Проте споживачі повідомляють, що лише один з 4 брендів відрізняється від конкурентів.", "treba-wp"); ?> <span class="text-primary"><?php _e("Будьте серед 25-ти кращих зі 100, що виділяються для споживачів.", "treba-wp"); ?></span> <?php _e("Арома маркетинг дає змогу компаніям виокремити себе завдяки потужним враженням в місцях контакту з клієнтами", "treba-wp"); ?>
           </div>
         </div>
         <div class="block-top-big-animate">
           <ul class="custom-list opacity-80">
-            <li>Зміцнює ідентичність бренду</li>
-            <li>Покращує задоволеність клієнтів до 20%</li>
-            <li>Збільшує до 11% прибутки від продажу</li>
+            <li><?php _e("Зміцнює ідентичність бренду", "treba-wp"); ?></li>
+            <li><?php _e("Покращує задоволеність клієнтів до 20%", "treba-wp"); ?></li>
+            <li><?php _e("Збільшує до 11% прибутки від продажу", "treba-wp"); ?></li>
           </ul>
         </div>
       </div>
@@ -157,49 +157,6 @@ Template Name: ГОЛОВНА
   </div>
 </div>
 <!-- Aromabussiness-items END -->
-
-<div class="mb-32 hidden">
-  <div class="container">
-    <div class="relative flex flex-col items-center mb-12">
-      <h2 class="text-4xl leading-12 text-center font-title mb-6 treba-animate fade-up"><?php _e("Кейси наших кліентів", "treba-wp"); ?></h2>
-      <div class="flex items-center justify-center opacity-75 -mx-2 mb-6 treba-animate fade-up">
-        <div class="bg-primary w-6 h-[1px] px-2"></div>
-        <div class="px-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aroma-pattern-item.svg" class="w-4 h-4"></div>
-        <div class="bg-primary w-6 h-[1px] px-2"></div>
-      </div>
-    </div>
-    <!-- Case item -->
-    <div class="case-item flex flex-col xl:flex-row flex-wrap mb-10 xl:-mx-10">
-      <div class="w-full xl:w-1/2 relative xl:px-10">
-        <div class="absolute top-1/2 -translate-y-1/2 case-item-animation">
-          <div class="text-primary text-2xl font-title mb-6">Helen Marlen Mandarin</div>
-          <div class="w-full xl:w-3/4 text-lg opacity-75 mb-8">"... найбільший мультибренд мережі Helen Marlen Group, створений в кращих традиціях європейських open space ..."</div>
-          <div><a href="#" class="inline-block bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4"><?php _e("Читати історію повністю", "treba-wp"); ?></a></div>
-        </div>
-      </div>
-      <div class="w-full xl:w-1/2 xl:px-10">
-        <div class="sticky top-4">
-          <img src="https://static.tildacdn.com/tild3263-6339-4163-b836-353363663834/8aca5ec60a9d9231382e.JPG" alt="" loading="lazy" class="w-full h-76 object-cover rounded-2xl">
-        </div>
-      </div>
-    </div>
-    <!-- END Case item -->
-    <!-- Case item -->
-    <div class="flex flex-col xl:flex-row flex-wrap mb-10 xl:-mx-10">
-      <div class="w-full xl:w-1/2 relative xl:px-10">
-        <div class="absolute top-1/2 -translate-y-1/2 case-item-animation">
-          <div class="text-primary text-2xl font-title mb-6">Helen Marlen Mandarin</div>
-          <div class="w-full xl:w-3/4 text-lg opacity-75 mb-8">"... найбільший мультибренд мережі Helen Marlen Group, створений в кращих традиціях європейських open space ..."</div>
-          <div><a href="#" class="inline-block bg-gradient-to-r from-main-gray to-main-dark border-2 border-main-gray hover:text-white rounded-xl px-6 py-4"><?php _e("Читати історію повністю", "treba-wp"); ?></a></div>
-        </div>
-      </div>
-      <div class="w-full xl:w-1/2 xl:px-10">
-        <img src="https://static.tildacdn.com/tild3263-6339-4163-b836-353363663834/8aca5ec60a9d9231382e.JPG" alt="" loading="lazy" class="w-full h-76 object-cover rounded-2xl">
-      </div>
-    </div>
-    <!-- END Case item -->
-  </div>
-</div>
 
 <!-- Обладнання -->
 <div class="mb-20 xl:mb-32">
