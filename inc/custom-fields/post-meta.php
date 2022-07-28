@@ -27,6 +27,7 @@ function crb_post_theme_options() {
         Field::make( 'image', 'crb_service_blocks_img', 'Зображення' )->set_value_type( 'url'),
         Field::make( 'rich_text', 'crb_service_blocks_content', 'Текст' ),
       )),
+      Field::make( 'media_gallery', 'crb_service_gallery', 'Галерея' )->set_type( array( 'image' ) ),
   ) );  
 }
 

@@ -72,6 +72,28 @@
     </div>
     <!-- END Блоки Текст+Картинка -->
 
+    <!-- GALLERY -->
+    <?php if (carbon_get_the_post_meta('crb_service_gallery')): ?>
+    <div class="mb-32">
+      <div class="text-3xl font-title mb-6"><?php _e("Галерея", "treba-wp"); ?></div>
+      <div class="flex flex-wrap -mx-2 xl:-mx-4">
+        <?php 
+          $services_photos = carbon_get_the_post_meta('crb_service_gallery');
+          foreach ( $services_photos as $services_photo ): ?>
+          <div class="w-1/2 xl:w-1/4 relative px-2 xl:px-4 mb-4 xl:mb-6">
+            <?php 
+              $photo_src_large = wp_get_attachment_image_src($services_photo, 'large'); 
+              $photo_src_medium = wp_get_attachment_image_src($services_photo, 'medium'); 
+            ?>
+            <a href="<?php echo $photo_src_large[0]; ?>" data-lightbox="wow-gallery" data-title="<?php the_title(); ?>" class="w-full h-full absolute top-0 left-0 z-10"></a>
+            <img src="<?php echo $photo_src_medium[0]; ?>" loading="lazy" class="h-full">
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <?php endif; ?>
+    <!-- END GALLERY -->
+
     <!-- Other services -->
     <div class="mb-20">
       <h2 class="text-3xl font-title mb-12"><?php _e("Схожі послуги", "treba-wp"); ?></h2>
