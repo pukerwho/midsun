@@ -170,7 +170,7 @@ Template Name: ГОЛОВНА
           'taxonomy' => 'product-category', 
           'parent' => 0, 
           'show_count' => false,
-          'hide_empty' => false,
+          'hide_empty' => true,
         ));
         
         foreach ( array_slice($product_categories, 0, 3) as $product_category ): ?>
@@ -183,7 +183,7 @@ Template Name: ГОЛОВНА
         'taxonomy' => 'product-category', 
         'parent' => 0, 
         'show_count' => false,
-        'hide_empty' => false,
+        'hide_empty' => true,
       ));
       foreach ( array_slice($product_categories, 0, 3) as $product_category ): ?>
       <div class="tab-content hidden" data-tab="products-<?php echo $product_category->term_id; ?>">
