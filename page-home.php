@@ -191,7 +191,7 @@ Template Name: ГОЛОВНА
           <?php 
             $query = new WP_Query( array( 
               'post_type' => 'products', 
-              'posts_per_page' => 8,
+              'posts_per_page' => 6,
               'order'    => 'ASC',
               'tax_query' => array(
                 array(
