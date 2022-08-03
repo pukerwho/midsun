@@ -18,6 +18,8 @@ if ( ! function_exists( 'treba_wp_setup' ) ) :
         'mobile' => esc_html__( 'Mobile', 'treba-wp' ),
         'footer_info' => esc_html__( 'Footer info', 'treba-wp' ),
         'products_menu' => esc_html__( 'Меню для продуктів', 'treba-wp' ),
+        'company' => esc_html__( 'Компанія', 'treba-wp' ),
+        'info' => esc_html__( 'Інформація', 'treba-wp' ),
 			)
 		);
 

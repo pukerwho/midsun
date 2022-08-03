@@ -27,7 +27,7 @@
           </div>
           <div>
             <?php wp_nav_menu([
-              'theme_location' => 'header',
+              'theme_location' => 'company',
               'container' => 'div',
               'menu_class' => 'flex flex-col'
             ]); ?> 
@@ -40,7 +40,7 @@
           </div>
           <div>
             <?php wp_nav_menu([
-              'theme_location' => 'header',
+              'theme_location' => 'info',
               'container' => 'div',
               'menu_class' => 'flex flex-col'
             ]); ?> 

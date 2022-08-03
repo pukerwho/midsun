@@ -166,20 +166,42 @@ Template Name: ГОЛОВНА
         <h2 class="text-3xl xl:text-4xl xl:leading-12 font-title treba-animate fade-up"><?php _e("Обладнання", "treba-wp"); ?></h2>
       </div>
       <div class="products-tabs flex items-center flex-nowrap xl:flex-wrap overflow-x-scroll xl:overflow-x-auto -mx-2">
-        <div class="px-2"><div class="tab-btn bg-primary hover:bg-primary rounded-2xl text-center cursor-pointer whitespace-nowrap px-4 py-3" data-tab="products-aromadispansers"><?php _e("Аромадиспенсери", "treba-wp"); ?></div></div>
-        <div class="px-2"><div class="tab-btn bg-main-gray hover:bg-primary rounded-2xl text-center cursor-pointer whitespace-nowrap px-4 py-3" data-tab="products-aromapalochki"><?php _e("Аромапалочки", "treba-wp"); ?></div></div>
-        <div class="px-2"><div class="tab-btn bg-main-gray hover:bg-primary rounded-2xl text-center cursor-pointer whitespace-nowrap px-4 py-3" data-tab="products-car"><?php _e("Для авто", "treba-wp"); ?></div></div>
-        <div class="px-2"><div class="tab-btn bg-main-gray hover:bg-primary rounded-2xl text-center cursor-pointer whitespace-nowrap px-4 py-3" data-tab="products-all"><?php _e("Всі товари", "treba-wp"); ?></div></div>
+        <?php $product_categories = get_terms( array( 
+          'taxonomy' => 'product-category', 
+          'parent' => 0, 
+          'show_count' => false,
+          'hide_empty' => false,
+        ));
+        
+        foreach ( array_slice($product_categories, 0, 3) as $product_category ): ?>
+          <div class="tab-item px-2"><div class="tab-btn hover:bg-primary rounded-2xl text-center cursor-pointer whitespace-nowrap px-4 py-3" data-tab="products-<?php echo $product_category->term_id; ?>"><?php echo $product_category->name; ?></div></div>
+        <?php endforeach; ?>
       </div>
     </div>
     <div>
-      <div class="tab-content" data-tab="products-aromadispansers">
+      <?php $product_categories = get_terms( array( 
+        'taxonomy' => 'product-category', 
+        'parent' => 0, 
+        'show_count' => false,
+        'hide_empty' => false,
+      ));
+      foreach ( array_slice($product_categories, 0, 3) as $product_category ): ?>
+      <div class="tab-content hidden" data-tab="products-<?php echo $product_category->term_id; ?>">
         <div class="flex flex-wrap -mx-4">
           <?php 
             $query = new WP_Query( array( 
               'post_type' => 'products', 
               'posts_per_page' => 8,
               'order'    => 'ASC',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'product-category',
+                  'terms' => $product_category->term_id,
+                  'field' => 'term_id',
+                  'include_children' => true,
+                  'operator' => 'IN'
+                )
+              ),
             ) );
           if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
             <div class="w-1/2 xl:w-1/3 px-4 mb-6">
@@ -188,51 +210,7 @@ Template Name: ГОЛОВНА
           <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
       </div>
-      <div class="tab-content hidden" data-tab="products-aromapalochki">
-        <div class="flex flex-wrap -mx-4">
-          <?php 
-            $query = new WP_Query( array( 
-              'post_type' => 'products', 
-              'posts_per_page' => 8,
-              'order'    => 'ASC',
-            ) );
-          if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-            <div class="w-1/2 xl:w-1/3 px-4 mb-6">
-              <?php echo get_template_part('template-parts/components/product-card'); ?>
-            </div>
-          <?php endwhile; endif; wp_reset_postdata(); ?>
-        </div>
-      </div>
-      <div class="tab-content hidden" data-tab="products-car">
-        <div class="flex flex-wrap -mx-4">
-          <?php 
-            $query = new WP_Query( array( 
-              'post_type' => 'products', 
-              'posts_per_page' => 8,
-              'order'    => 'ASC',
-            ) );
-          if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-            <div class="w-1/2 xl:w-1/3 px-4 mb-6">
-              <?php echo get_template_part('template-parts/components/product-card'); ?>
-            </div>
-          <?php endwhile; endif; wp_reset_postdata(); ?>
-        </div>
-      </div>
-      <div class="tab-content hidden" data-tab="products-all">
-        <div class="flex flex-wrap -mx-4">
-          <?php 
-            $query = new WP_Query( array( 
-              'post_type' => 'products', 
-              'posts_per_page' => 8,
-              'order'    => 'ASC',
-            ) );
-          if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-            <div class="w-1/2 xl:w-1/3 px-4 mb-6">
-              <?php echo get_template_part('template-parts/components/product-card'); ?>
-            </div>
-          <?php endwhile; endif; wp_reset_postdata(); ?>
-        </div>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </div>
